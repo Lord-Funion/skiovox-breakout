@@ -27,7 +27,7 @@ start.addEventListener("click", async function () {
 
 cancel.addEventListener("click", async function () {
     let msg = await chrome.runtime.sendMessage({ type: "cancel-inspect" });
-    if (!msg) return changeStatusMessage("failed! oh no! im gonna die!");
+    if (!msg) return changeStatusMessage("failed!");
     return changeStatusMessage("canceled");
 });
 sections().forEach(function (element) {
